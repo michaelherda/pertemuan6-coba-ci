@@ -27,14 +27,17 @@
 						<label for="nrp">NRP</label>
 						<input type="text" class="form-control" id="nrp" name="nrp">
 					</div>
+					<?= form_error('nrp');?>
 					<div class="form-group">
 						<label for="email">Email</label>
 						<input type="text" class="form-control" id="email" name="email">
 					</div>
+					<?= form_error('email');?>
 					<div class="form-group">
 						<label for="jurusan">Jurusan</label>
 						<input type="text" class="form-control" id="jurusan" name="jurusan">
 					</div>
+					<?= form_error('jurusan');?>
 					<button type="submit" class="btn btn-primary">tambah</button>
 				</form>
 			</div>
