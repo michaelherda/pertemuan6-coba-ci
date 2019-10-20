@@ -52,6 +52,7 @@ class Mahasiswa extends CI_Controller
         $this->load->view('mahasiswa/detail',$data);
         $this->load->view('templates/footer');;
     }
+    
     public function ubah($id){
         $data['judul'] = 'Form Ubah Data Mahasiswa';
         $data['mahasiswa'] = $this->Mahasiswa_model->getMahasiswaById($id);
