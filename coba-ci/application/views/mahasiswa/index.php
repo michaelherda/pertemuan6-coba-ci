@@ -38,7 +38,7 @@
               <td><?= $mhs['email']; ?></td>
               <td><?= $mhs['jurusan']; ?></td>
               <td>
-                <a class="badge badge-success">Ubah</a>
+                <a href="<?=base_url()?>mahasiswa/ubah/<?= $mhs['id'];?>" class="badge badge-pill badge-success float-right ml-1">Ubah</a>
                 <a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" onclick="return confirm('Yakin Ingin Hapus?');" class="badge badge-danger">Hapus</a>
               </td>
             </tr>
