@@ -25,22 +25,25 @@ class Mahasiswa extends CI_Controller
 
 	public function tambah()
 	{
+        $data['judul'] = 'Form Tambah Data Mahasiswa';
+
+        $this->load->view('templates/header',$data);
+        $this->load->view('templates/footer');
 
 		$this->form_validation->set_rules('nama', 'Nama', 'required|min_length[3]');
+         $this->form_validation->set_rules('nrp', '<b>NRP</b>', 'required|numeric');
+        $this->form_validation->set_rules('email', '<b>Email</b>', 'required|valid_email');
 
 		if ($this->form_validation->run() == false) {
+            // $this->load->view('templates/header', $data);
 			$this->load->view('mahasiswa/tambah');
+            // $this->load->view('templates/header');
 		}else{
-			$data=[
-				'nama'=>$this->input->post('nama'),
-				'nrp'=>$this->input->post('nrp'),
-				'email'=>$this->input->post('email'),
-				'jurusan'=>$this->input->post('jurusan')
-
-			];
-
-			$this->db->insert('mahasiswa', $data);
-			redirect('mahasiswa/index');
+			$this->Mahasiswa_model->tambahDataMahasiswa();
+            $this->session->set_flashdata('flash', 'Ditambahkan');
+            redirect('mahasiswa');
+			// $this->db->insert('mahasiswa', $data);
+			// redirect('mahasiswa/index');
 		}
 
 	}
