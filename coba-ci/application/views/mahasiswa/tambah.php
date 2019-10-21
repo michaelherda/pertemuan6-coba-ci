@@ -34,9 +34,15 @@
 					</div>
 					<?= form_error('email');?>
 					<div class="form-group">
-						<label for="jurusan">Jurusan</label>
-						<input type="text" class="form-control" id="jurusan" name="jurusan">
-					</div>
+					    <label for="jurusan">Example select</label>
+					    <select class="form-control" id="jurusan" name="jurusan">
+					      <option value="Teknik Industri">Teknik Industri</option>
+					      <option value="Teknologi Pangan">Teknologi Pangan</option>
+					      <option value="Teknik Mesin">Teknik Mesin</option>
+					      <option value="Teknik Informatika">Teknik Informatika</option>
+					      <option value="Teknik Lingkungan">Teknik Lingkungan</option><option value="Teknik Perencanaan & Wilayah Tata Kota">Teknik Perencanaan & Wilayah Tata Kota</option>
+					    </select>
+					  </div>
 					<?= form_error('jurusan');?>
 					<button type="submit" class="btn btn-primary">tambah</button>
 				</form>

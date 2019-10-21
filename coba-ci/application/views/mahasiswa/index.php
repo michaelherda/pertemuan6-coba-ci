@@ -1,16 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <title>Data Mahasiswa</title>
-</head>
-<body>
 
   <div class="container">
 
@@ -22,24 +9,25 @@
                 Data mahasiswa <strong>Berhasil</strong> <?=$this->session->flashdata('flash');?>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
+                </button>
+                </div>
             </div>
         </div>
 
         <?php endif;?>
-
-        <h3>Daftar Mahasiswa</h3>
+        <div class="row mt-3">
         <div class="col-md-6">
-        <?php if (empty($mahasiswa)) : ?>
-        <div class="alert alert-danger" role="alert">
-        Data Mahasiswa tidak ditemukan !
+        <h3>Daftar Mahasiswa</h3>
         </div>
-        <?php endif; ?>
-        
-        <a href="<?= base_url('mahasiswa/tambah');?>" class="btn btn-primary mb-3">Tambah Data</a>
+        </div>
 
-         <div class="row mb-3">
+        <div class="row mt-3">
+          <div class="col-md-6">
+        <a href="<?= base_url('mahasiswa/tambah');?>" class="btn btn-primary mb-3">Tambah Data</a>
+        </div>
+        </div>
+
+         <div class="row mb-2">
         <div class="col-md-6">
             <form action="" method="post">
             <div class="input-group">
@@ -49,11 +37,17 @@
             </div>
             </div>
             </form>
+            <?php if (empty($mahasiswa)) : ?>
+        <div class="alert alert-danger mt-2" role="alert">
+        Data Mahasiswa tidak ditemukan !
+        </div>
+        <?php endif; ?>
         </div>
     </div>
 
-
-        <table class="table">
+      <div class="row mt-3">
+      <div class="col-md">
+        <table class="table" >
           <thead class="thead-dark">
             <tr>
               <th scope="col">#</th>
@@ -74,14 +68,17 @@
               <td><?= $mhs['email']; ?></td>
               <td><?= $mhs['jurusan']; ?></td>
               <td>
-                <a href="<?=base_url()?>mahasiswa/detail/<?= $mhs['id'];?>" class="badge badge-info ">Detail</a>
-                <a href="<?=base_url()?>mahasiswa/ubah/<?= $mhs['id'];?>" class="badge badge-success ml-1">Ubah</a>
-                <a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" onclick="return confirm('Yakin Ingin Hapus?');" class="badge badge-danger ml-1" onclick="return confirm('Yakin Ingin Hapus?');">Hapus</a>
+                <a href="<?=base_url()?>mahasiswa/detail/<?= $mhs['id'];?>" class="badge badge-info float-right ml-1">Detail</a>
+                <a href="<?=base_url()?>mahasiswa/ubah/<?= $mhs['id'];?>" class="badge badge-success float-right ml-1">Ubah</a>
+                <a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" onclick="return confirm('Yakin Ingin Hapus?');" class="badge badge-danger float-right ml-1" onclick="return confirm('Yakin Ingin Hapus?');">Hapus</a>
               </td>
             </tr>
             <?php endforeach; ?>
           </tbody>
         </table>
+        </div>
+        </div>
       </div>
     </div>
   </div>
+
