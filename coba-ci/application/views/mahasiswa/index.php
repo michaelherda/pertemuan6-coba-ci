@@ -45,7 +45,7 @@
             <div class="input-group">
             <input type="text" class="form-control" placeholder="Cari Mahasiswa ... " name="keyword">
             <div class="input-group-append">
-            <button class="btn btn-outline-primary" type="submit" id="cari">Cari</button>
+            <button class="btn btn-primary" type="submit" id="cari">Cari</button>
             </div>
             </div>
             </form>
