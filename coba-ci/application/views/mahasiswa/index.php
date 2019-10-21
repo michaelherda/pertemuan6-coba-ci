@@ -38,9 +38,9 @@
               <td><?= $mhs['email']; ?></td>
               <td><?= $mhs['jurusan']; ?></td>
               <td>
-                <a href="<?=base_url()?>mahasiswa/detail/<?= $mhs['id'];?>" class="badge badge-info ml-1">Detail</a>
+                <a href="<?=base_url()?>mahasiswa/detail/<?= $mhs['id'];?>" class="badge badge-info ">Detail</a>
                 <a href="<?=base_url()?>mahasiswa/ubah/<?= $mhs['id'];?>" class="badge badge-success ml-1">Ubah</a>
-                <a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" onclick="return confirm('Yakin Ingin Hapus?');" class="badge badge-danger" onclick="return confirm('Yakin Ingin Hapus?');">Hapus</a>
+                <a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" onclick="return confirm('Yakin Ingin Hapus?');" class="badge badge-danger ml-1" onclick="return confirm('Yakin Ingin Hapus?');">Hapus</a>
               </td>
             </tr>
             <?php endforeach; ?>
