@@ -1,6 +1,6 @@
 <?php 
  //CONFIG
- $config['base_url'] = 'http://localhost/rekweb/ci-app/peoples/index';
+ $config['base_url'] = 'http://localhost/pertemuan6-coba-ci/coba-ci/peoples/index';
  //styling
  $config['full_tag_open'] = '<nav><ul class="pagination justify-content-center">';
  $config['full_tag_close'] = '</ul>
