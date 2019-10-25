@@ -44,7 +44,7 @@
 					    </select>
 					  </div>
 					<?= form_error('jurusan');?>
-					<button type="submit" class="btn btn-primary">tambah</button>
+					<button type="submit" name="tambah" class="btn btn-primary">tambah</button>
 				</form>
 			</div>
 		</div>

@@ -1,9 +1,9 @@
 
   <div class="container">
-
+      <div class="flash-data " data-flashdata="<?= $this->session->flashdata('flash');?>"></div>
      <?php if($this->session->flashdata('flash')): ?>
 
-        <div class="row mt-3">
+       <!--  <div class="row mt-3">
             <div class="col-md-6">  
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                 Data mahasiswa <strong>Berhasil</strong> <?=$this->session->flashdata('flash');?>
@@ -12,7 +12,7 @@
                 </button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <?php endif;?>
         <div class="row mt-3">
@@ -70,7 +70,7 @@
               <td>
                 <a href="<?=base_url()?>mahasiswa/detail/<?= $mhs['id'];?>" class="badge badge-info float-right ml-1">Detail</a>
                 <a href="<?=base_url()?>mahasiswa/ubah/<?= $mhs['id'];?>" class="badge badge-success float-right ml-1">Ubah</a>
-                <a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" onclick="return confirm('Yakin Ingin Hapus?');" class="badge badge-danger float-right ml-1" onclick="return confirm('Yakin Ingin Hapus?');">Hapus</a>
+                <a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" class="badge badge-danger float-right ml-1 tombol-hapus">Hapus</a>
               </td>
             </tr>
             <?php endforeach; ?>
